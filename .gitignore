@@ -1,0 +1,9 @@
+node_modules
+commitlint.config.js
+package.json
+package-lock.json
+.husky
+gitrc/config
+nvim/undodir
+tmux/plugins
+tmuxinator
