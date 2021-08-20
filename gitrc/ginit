@@ -1,0 +1,115 @@
+#!/bin/bash
+# File              : ginit
+# Author            : I'mCylon <imcylonrs@gmail.com>
+# Date              : 18.08.2021
+# Last Modified Date: 20.08.2021
+# Last Modified By  : I'mCylon <imcylonrs@gmail.com>
+
+cd .
+DIR= pwd
+read -p "Set/Install: GIT, HUSKY, COMMITLINT, COMMITIZEN,CZ-EMOJI?  [Y/n]" \
+        GIT_INIT
+if [ -z "$GIT_INIT" ] || [ -z "$GIT_INIT" = "y" ] || [ -z "$GIT_INIT" = "Y" ] \
+    || [ -z "$GIT_INIT" = "yes" ] || [ -z "$GIT_INIT" = "Yes" ] \
+    || [ -z "$GIT_INIT" = "YES" ]; then
+# Setting git
+git --version > /dev/null 2>&1
+if [ $? != 0 ]; then
+    echo "Installing git..."
+    sudo pacman -S git
+else
+    echo -e "\n$(git --version)"
+fi
+if [ ! -d .git ]; then
+    git init
+else
+    read -p "Git repository already exist.
+If you want to modify this repository, follow:
+    - Delete .git/
+    - run ginit(again)"
+    exit
+fi
+# Setting nodejs
+node -v > /dev/null 2>&1
+if [ $? != 0 ]; then
+    echo "Installing nodejs..."
+    sudo pacman -S nodejs
+else
+    echo -e "node version $(node -v)"
+fi
+# Setting npm
+npm -v > /dev/null 2>&1
+if [ $? != 0 ]; then
+    echo "Installing npm..."
+    sudo pacman -S npm
+else
+    echo "npm version $(npm -v)"
+fi
+# Setting commitizen
+commitizen > /dev/null 2>&1
+if [ $? != 0 ]; then
+    echo "Installing commitizen..."
+    sudo npm install --global commitizen
+else
+    echo "$(npm list -g commitizen|rg commitizen|head -1|sed \
+        's/.*\(commitizen\)@\([0-9].*[0-9]\)/\1 version \2 /')"
+fi
+# Setting commitlint
+commitlint -v > /dev/null 2>&1
+if [ $? != 0 ]; then
+    echo "Installing commitlint..."
+    sudo npm install --global commitlint
+else
+    echo "$(commitlint -v|sed 's/.*\(commitlint\).*@\([0-9].*[0-9]\)/\1 version \2/')"
+fi
+# Setting cz-emoji
+if [ ! -f /usr/lib/node_modules/cz-emoji/lib/types.json ]; then
+    echo "Installing cz-emoji..."
+    sudo npm install --global cz-emoji
+else
+    echo "$(npm list -g cz-emoji|sed 's/.*\(cz-emoji\).*@\([0-9].*[0-9]\)/\1 version \2/')"
+fi
+# Setting husky
+husky -v > /dev/null 2>&1
+if [ $? != 0 ]; then
+    echo "Installing husky..."
+    sudo npm install --global husky
+else
+    echo "husky version $(husky -v)"
+fi
+if [ -d .husky ]; then
+    rm -rfv ./.husky
+fi
+npx husky install
+npx husky add .husky/commit-msg 'npx --no-install commitlint --edit "$1"'
+npx husky add .husky/prepare-commit-msg \
+    'exec < /dev/tty && /usr/lib/node_modules/commitizen/bin/git-cz --hook || true'
+# Setting commitlint-config-gitmoji
+if [ ! -f ./node_modules/commitlint-config-gitmoji/lib/index.js ]; then
+    echo "Installing commitlint-config-gitmoji..."
+    npm install --save-dev commitlint-config-gitmoji
+else
+    echo "$(npm list -D commitlint-config-gitmoji|rg config-gitmoji|sed \
+        's/.*\(commitlint-config-gitmoji\)@\([0-9].*[0-9]\)/\1 version \2 /')"
+fi
+if [ ! -f ./commitlint.config.js ]; then
+    echo "module.exports = {extends: ['gitmoji']};" > commitlint.config.js
+fi
+# Setting gitignore
+if [ ! -f .gitignore ]; then
+    echo "node_modules" >.gitignore
+    echo "commitlint.config.js" >>.gitignore
+    echo "package.json" >>.gitignore
+    echo "package-lock.json" >>.gitignore
+    echo ".husky" >>.gitignore
+fi
+if [ ! -f ~/.czrc ]; then
+    ln -sf ~/.dotfiles/gitrc/czrc.json ~/.czrc
+fi
+sudo sed -i 's/\(\s:\s`${type.emoji}\)\s\(${formatS.*}\)`/\1 ${type.name}\2:`/' /usr/lib/node_modules/cz-emoji/index.js
+
+VARTYPES=$(cat ~/.dotfiles/gitrc/czrc.json| rg name |\
+    sed "s/.*:\s\"\(.*\)\"/'\1', /" | sort | tr -s '\n' ' '| sed 's/,\s$//'|\
+    sed 's/\(.*\)/var types = [\1];/') 
+ sed -i 's/var types.*/'"$VARTYPES"'/' ./node_modules/@gitmoji/commit-types/lib/index.js
+fi
