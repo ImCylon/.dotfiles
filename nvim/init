@@ -1,0 +1,45 @@
+#!/bin/bash
+# File              : init
+# Author            : I'mCylon <imcylonrs@gmail.com>
+# Date              : 04.08.2021
+# Last Modified Date: 14.08.2021
+# Last Modified By  : I'mCylon <imcylonrs@gmail.com>
+
+# ----- install package manager: paq-nvim
+# ----- TODO: fix cmd if exist directory .../paq/paq-nvim
+git clone git://github.com/savq/paq-nvim.git \
+    "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/pack/paqs/opt/paq-nvim
+
+# conf
+# mkdir -p ~/.config/nvim
+# cp -r ./nvim/init.lua ./nvim/lua ./nvim/after ~/.config/nvim/
+
+
+# Language servers
+gem install solargraph
+go get golang.org/x/tools/gopls@latest
+pacaur --noedit --noconfirm rust-analyzer
+pip install python-language-server
+yarn global add bash-language-server
+yarn global add sql-language-server
+yarn global add typescript typescript-language-server
+yarn global add vim-language-server
+yarn global add vls
+yarn global add vscode-css-languageserver-bin
+yarn global add vscode-html-languageserver-bin
+yarn global add vscode-json-languageserver
+yarn global add yaml-language-server
+
+# clone project Lua LSP
+mkdir -p $HOME/.local/share/nvim/site/pack
+cd $HOME/.local/share/nvim/site/pack || exit 1
+git clone git@github.com:sumneko/lua-language-server.git
+cd lua-language-server || exit 1
+git submodule update --init --recursive
+cd 3rd/luamake
+compile/install.sh
+cd ../..
+./3rd/luamake/luamake rebuild
+./bin/Linux/lua-language-server -E ./main.lua
+
+echo "Run `nvim +PaqInstall` to finish setup"
