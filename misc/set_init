@@ -1,0 +1,34 @@
+#!/bin/sh
+# File              : set_init
+# Author            : I'mCylon <imcylonrs@gmail.com>
+# Date              : 07.08.2021
+# Last Modified Date: 07.08.2021
+# Last Modified By  : I'mCylon <imcylonrs@gmail.com>
+
+# TODO swapCapsEsc ç to ;
+# TODO trocar zsh to bash
+
+if [[ "$1" == "--swapCapsEsc" ]]; then
+    ln -sf ~/.dotfiles/misc/swapCapsEsc ~/.local/bin
+
+elif [[ "$1" == "--ginit" ]]; then
+    ln -sf ~/.dotfiles/git/ginit ~/.local/bin
+
+elif [[ "$1" == "--swapSemicolon" ]]; then
+    sudo ln -sf ~/.dotfiles/misc/symbols-br /usr/share/X11/xkb/symbols/br
+
+elif [[ "$1" == "--BashToZsh" ]]; then
+    sudo sed -i 's/bash/zsh/' /etc/passwd
+    
+elif [[ "$1" == "--bsplasma" ]]; then
+    sudo cp ~/.dotfiles/misc/bsplasma.desktop /usr/share/xsessions
+
+else
+    echo ''
+    echo 'Options:'
+    echo '    --swapCapsEsc'
+    echo '    --swapSemicolon'
+    echo '    --BashToZsh'
+    echo '    --bsplasma'
+    echo '    --ginit'
+fi

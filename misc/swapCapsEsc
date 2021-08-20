@@ -1,0 +1,9 @@
+#!/bin/sh
+# File              : swapCapsEsc
+# Author            : I'mCylon <imcylonrs@gmail.com>
+# Date              : 27.07.2021
+# Last Modified Date: 27.07.2021
+# Last Modified By  : I'mCylon <imcylonrs@gmail.com>
+
+setxkbmap -option caps:escape_shifted_capslock
+setxkbmap -layout br

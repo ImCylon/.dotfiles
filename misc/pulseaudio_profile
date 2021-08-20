@@ -1,0 +1,16 @@
+#!/bin/bash
+# File              : pulseaudio_profile
+# Author            : I'mCylon <imcylonrs@gmail.com>
+# Date              : 27.07.2021
+# Last Modified Date: 27.07.2021
+# Last Modified By  : I'mCylon <imcylonrs@gmail.com>
+#!/bin/sh
+
+CURRENT_PROFILE=$(pacmd list-cards | grep "active profile" -m 1 |\
+    sed 's/.*<\(.*\)>/\1/')
+
+if [ $CURRENT_PROFILE == "output:hdmi-stereo" ]; then
+    pacmd set-card-profile 0 "off"
+else
+    pacmd set-card-profile 0 "output:hdmi-stereo"
+fi

@@ -1,0 +1,86 @@
+# General
+alias ls='lsd'
+alias lr='ls -lath|rg'
+alias r='ranger .'
+alias q='exit'
+alias google-chrome='devour google-chrome-stable'
+alias chrome='devour google-chrome-stable'
+
+# Editor
+alias rcalias='nvim ~/.dotfiles/misc/aliases'
+alias rcvimwiki='nvim ~/Documents/vimwiki/index.md'
+alias rcbspwm='nvim ~/.dotfiles/bspwm/bspwmrc'
+alias rckitty='nvim ~/.dotfiles/kitty/kitty.conf'
+alias rcnvim='cd ~/.dotfiles/nvim/ && nvim init.lua'
+alias rcabrev='nvim ~/.dotfiles/nvim/lua/abrev.lua'
+alias rcpicom='nvim ~/.dotfiles/picom/picom.conf'
+alias rcpolybar='nvim ~/.dotfiles/polybar/imcylon'
+alias rcalacritty='nvim ~/.dotfiles/alacritty/alacritty.yml'
+alias rcranger='nvim ~/.dotfiles/ranger/rc.conf'
+alias rcsxhkd='nvim ~/.dotfiles/sxhkd/sxhkdrc'
+alias rctmux='nvim ~/.dotfiles/tmux/tmux.conf'
+alias rczsh='nvim ~/.zshrc'
+alias vim='nvim'
+
+# Git
+alias gc='git commit -S -v'
+alias glo='git log'
+alias gcd='git checkout devel'
+alias gci='git checkout issues'
+alias grh='git reset HEAD~1'
+alias gp='git push -u origin master'
+
+# Systems
+alias reboot='sudo reboot'
+alias shutdown='sudo shutdown 0'
+alias fr='find | rg '
+alias psr='ps aux | rg '
+alias hr='history | rg'
+alias systemctl='sudo systemctl '
+
+# Directories
+alias sia='/home/projects/SciIzi/app'
+alias sic='/home/projects/SciIzi/comsci'
+alias sidart='/home/projects/SciIzi/comsci/langs/dart'
+alias sim='/home/projects/SciIzi/mathematics'
+alias sip='/home/projects/SciIzi/physics'
+alias 42='/home/projects/project-42'
+alias cfg='~/.config'
+alias dff='~/.dotfiles'
+alias lcl='~/.local'
+alias dw='/home/download'
+
+# Arch Linux
+# Pacaur
+if (( $+commands[pacaur] )); then
+  #alias parep='pacaur -Si'
+  #alias pasu='pacaur -Syu --noconfirm'
+  #alias paups='pacaur -Syyu'
+  alias pain='pacaur --noedit -S'
+  alias pains='pacaur -U'
+  alias painsd='pacaur -S --asdeps'
+  alias paloc='pacaur -Qi'
+  alias palocs='pacaur -Qs'
+  alias palst='pacaur -Qe'
+  alias pamir='pacaur -Syy'
+  alias paorph='pacaur -Qtd'
+  alias pare='pacaur -R'
+  alias parem='pacaur -Rns'
+  alias pass='pacaur --noedit -Ss'
+  alias paupg='pacaur --noedit -Syyu'
+fi
+
+# Gentoo
+# Emerge
+alias emerge='sudo emerge'
+alias ea='emerge -a '
+alias er='emerge -C '
+alias es='emerge -s '
+alias eclean='emerge --pretend --depclean'
+alias easkclean='emerge --ask --depclean'
+alias ed='emerge --fetconly '
+alias ess='emerge -S '
+# Equery
+alias equ='equery u '
+# General
+alias etc-update='sudo etc-update'
