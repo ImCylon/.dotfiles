@@ -2,32 +2,39 @@
 # File              : ginit
 # Author            : I'mCylon <imcylonrs@gmail.com>
 # Date              : 18.08.2021
-# Last Modified Date: 20.08.2021
+# Last Modified Date: 21.08.2021
 # Last Modified By  : I'mCylon <imcylonrs@gmail.com>
 
 cd .
 DIR= pwd
-read -p "Set/Install: GIT, HUSKY, COMMITLINT, COMMITIZEN,CZ-EMOJI?  [Y/n]" \
-        GIT_INIT
-if [ -z "$GIT_INIT" ] || [ -z "$GIT_INIT" = "y" ] || [ -z "$GIT_INIT" = "Y" ] \
-    || [ -z "$GIT_INIT" = "yes" ] || [ -z "$GIT_INIT" = "Yes" ] \
-    || [ -z "$GIT_INIT" = "YES" ]; then
+read -p "Set/Install: GIT, HUSKY, COMMITLINT, COMMITIZEN,CZ-EMOJI?  [Y/n]: " \
+    GIT_INIT
+if [ -z $GIT_INIT ] || [ "$GIT_INIT" == "y" ] || [ "$GIT_INIT" == "Y" ] || \
+    [ "$GIT_INIT" == "yes" ] || [ "$GIT_INIT" == "YES" ]
+then
 # Setting git
 git --version > /dev/null 2>&1
 if [ $? != 0 ]; then
     echo "Installing git..."
     sudo pacman -S git
 else
-    echo -e "\n$(git --version)"
+    echo -e "$(git --version)"
 fi
 if [ ! -d .git ]; then
     git init
 else
-    read -p "Git repository already exist.
-If you want to modify this repository, follow:
-    - Delete .git/
-    - run ginit(again)"
-    exit
+echo "Git repository already exist."
+echo "Update or Reset repository? [U/r]: " 
+    read -n1 GIT_CONT
+    if [ -z $GIT_CONT ] || [ "$GIT_CONT" == "U" ] || [ "$GIT_CONT" == "u" ]
+    then
+        echo "Updating..."
+    else
+        echo "you want to modify this repository, follow:"
+        echo "- Delete .git/"
+        echo "- run ginit(again)"
+        exit
+    fi
 fi
 # Setting nodejs
 node -v > /dev/null 2>&1
@@ -67,7 +74,7 @@ if [ ! -f /usr/lib/node_modules/cz-emoji/lib/types.json ]; then
     echo "Installing cz-emoji..."
     sudo npm install --global cz-emoji
 else
-    echo "$(npm list -g cz-emoji|sed 's/.*\(cz-emoji\).*@\([0-9].*[0-9]\)/\1 version \2/')"
+    echo "$(npm list -g cz-emoji|rg emoji|sed 's/.*\(cz-emoji\).*@\([0-9].*[0-9]\)/\1 version \2/')"
 fi
 # Setting husky
 husky -v > /dev/null 2>&1
@@ -112,4 +119,6 @@ VARTYPES=$(cat ~/.dotfiles/gitrc/czrc.json| rg name |\
     sed "s/.*:\s\"\(.*\)\"/'\1', /" | sort | tr -s '\n' ' '| sed 's/,\s$//'|\
     sed 's/\(.*\)/var types = [\1];/') 
  sed -i 's/var types.*/'"$VARTYPES"'/' ./node_modules/@gitmoji/commit-types/lib/index.js
+else
+    echo "bye!!"
 fi
