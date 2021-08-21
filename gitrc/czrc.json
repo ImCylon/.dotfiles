@@ -145,7 +145,7 @@
         "emoji": "💚",
         "code": ":green_heart:",
         "description": "Fixing CI Build.",
-        "name": "fix-ci"
+        "name": "fix_ci"
       },
       {
         "emoji": "⬇️",
@@ -361,7 +361,7 @@
         "emoji": "🙈",
         "code": ":see_no_evil:",
         "description": "Adding or updating a .gitignore file.",
-        "name": "see-no-evil"
+        "name": "gitignore"
       },
       {
         "emoji": "📸",
