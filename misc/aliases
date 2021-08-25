@@ -39,6 +39,7 @@ alias hr='history | rg'
 alias systemctl='sudo systemctl '
 
 # Directories
+alias pj='/home/projects'
 alias sia='/home/projects/SciIzi/app'
 alias sic='/home/projects/SciIzi/comsci'
 alias sidart='/home/projects/SciIzi/comsci/langs/dart'
