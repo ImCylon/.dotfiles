@@ -1,6 +1,8 @@
 # General
 alias ls='lsd'
 alias lr='ls -lath|rg'
+alias lt='ls -lthr'
+alias lss='ls -lhrS'
 alias r='ranger .'
 alias q='exit'
 alias google-chrome='devour google-chrome-stable'
