@@ -1,7 +1,7 @@
 default
 xkb_symbols "abnt2" {
 
-    // ln -sf /home/imcylon/.dotfiles/symbols-br /usr/share/x11/xkb/symbols/br
+    // ln -sf /home/imcylon/.dotfiles/misc/symbols-br /usr/share/x11/xkb/symbols/br
     // sudo setxkbmap -layout br
     // Based on a very simple Brazilian ABNT2 keyboard,
     // by Ricardo Y. Igarashi (iga@that.com.br).
