@@ -29,9 +29,9 @@
       },
       {
         "emoji": "🩹",
-        "code": ":adheseve_bandage:",
+        "code": ":adhesive_bandage:",
         "description": "Simple fix for a non-critical issue.",
-        "name": "simple-fix"
+        "name": "simple_fix"
       },
       {
         "emoji": "🚑",
@@ -193,13 +193,13 @@
         "emoji": "➕",
         "code": ":heavy_plus_sign:",
         "description": "Adding a dependency.",
-        "name": "dep-add"
+        "name": "dep_add"
       },
       {
         "emoji": "➖",
         "code": ":heavy_minus_sign:",
         "description": "Removing a dependency.",
-        "name": "dep-rm"
+        "name": "dep_rm"
       },
       {
         "emoji": "🔧",
@@ -241,7 +241,7 @@
         "emoji": "📦",
         "code": ":package:",
         "description": "Updating compiled files or packages.",
-        "name": "dep-up"
+        "name": "dep_up"
       },
       {
         "emoji": "👽",
@@ -289,7 +289,7 @@
         "emoji": "💡",
         "code": ":bulb:",
         "description": "Documenting source code.",
-        "name": "docs-code"
+        "name": "docs_code"
       },
       {
         "emoji": "🍻",
@@ -313,19 +313,19 @@
         "emoji": "🔊",
         "code": ":loud_sound:",
         "description": "Adding logs.",
-        "name": "log-add"
+        "name": "log_add"
       },
       {
         "emoji": "🔇",
         "code": ":mute:",
         "description": "Removing logs.",
-        "name": "log-rm"
+        "name": "log_rm"
       },
       {
         "emoji": "👥",
         "code": ":busts_in_silhouette:",
         "description": "Adding contributor(s).",
-        "name": "contrib-add"
+        "name": "contrib_add"
       },
       {
         "emoji": "🚸",
@@ -349,7 +349,7 @@
         "emoji": "🤡",
         "code": ":clown_face:",
         "description": "Mocking things.",
-        "name": "clown-face"
+        "name": "clown_face"
       },
       {
         "emoji": "🥚",
@@ -367,7 +367,7 @@
         "emoji": "📸",
         "code": ":camera_flash:",
         "description": "Adding or updating snapshots.",
-        "name": "camera-flash"
+        "name": "camera_flash"
       },
       {
         "emoji": "⚗",
