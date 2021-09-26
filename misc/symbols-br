@@ -1,7 +1,7 @@
 default
 xkb_symbols "abnt2" {
 
-    // ln -sf /home/imcylon/.dotfiles/misc/symbols-br /usr/share/x11/xkb/symbols/br
+    // ln -sf /home/imcylon/.dotfiles/misc/symbols-br /usr/share/X11/xkb/symbols/br
     // sudo setxkbmap -layout br
     // Based on a very simple Brazilian ABNT2 keyboard,
     // by Ricardo Y. Igarashi (iga@that.com.br).
@@ -27,6 +27,8 @@ xkb_symbols "abnt2" {
     key <AD12> { [  bracketleft,      braceleft,   ordfeminine,     dead_macron ] };
     key <BKSL> { [ bracketright,     braceright,     masculine,       masculine ] };
 
+    key <AC01> { [            a,              A,    dead_tilde,              ae ] };
+    key <AC02> { [            s,              S, dead_circumflex,        ssharp ] };
     key <AC10> { [    semicolon,          colon, dead_belowdot,   dead_abovedot ] };
     key <AC11> { [   asciitilde,    asciicircum,    dead_tilde,  dead_circumflex] };
 
@@ -149,8 +151,8 @@ xkb_symbols "dvorak" {
     key <AD11> { [   dead_acute,      dead_grave,                acute,            grave ] };
     key <AD12> { [        equal,            plus,              section,        plusminus ] };
 
-// Central row
-    key <AC01> { [            a,               A,                   ae,               AE ] };
+// Central row // key <AC01> { [            a,               A,                   ae,               AE ] };
+//    key <AC01> { [            a,               A,           asciitilde,       dead_grave ] };
     key <AC02> { [            o,               O,                   oe,               OE ] };
     key <AC03> { [            e,               E,             EuroSign,         EuroSign ] };
     key <AC04> { [            u,               U,               oslash,         Ooblique ] };
