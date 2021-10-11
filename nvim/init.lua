@@ -2,7 +2,7 @@
 File              : init.lua
 Author            : I'mCylon <imcylonrs@gmail.com>
 Date              : 14.08.2021
-Last Modified Date: 14.08.2021
+Last Modified Date: 11.10.2021
 Last Modified By  : I'mCylon <imcylonrs@gmail.com>
 --]]--
 
@@ -18,6 +18,7 @@ require('mappings')
 require('abrev')
 ---------- plugins
 require('plugins.gitsigns')
+require('plugins.vimtex')
 require('plugins.appearance')
 require('plugins.compe')
 require('plugins.emmet')
