@@ -32,16 +32,18 @@ alias gci='git checkout issues'
 alias grh='git reset HEAD~1'
 alias gp='git push -u origin master'
 
-# Systems
+# Systems and applications
 alias reboot='sudo reboot'
-alias shutdown='sudo shutdown 0'
+alias shutdown='sudo shutdown'
 alias fr='find | rg '
 alias psr='ps aux | rg '
 alias hr='history | rg'
-alias systemctl='sudo systemctl '
+alias sc='sudo systemctl '
+alias mount='sudo mount'
 
 # Directories
 alias pj='/home/projects'
+alias si='/home/projects/SciIzi'
 alias sia='/home/projects/SciIzi/app'
 alias sic='/home/projects/SciIzi/comsci'
 alias sidart='/home/projects/SciIzi/comsci/langs/dart'
@@ -52,6 +54,8 @@ alias cfg='~/.config'
 alias dff='~/.dotfiles'
 alias lcl='~/.local'
 alias dw='/home/download'
+alias cdi1='cd /home/projects/SciIzi/mathematics/1_periodo/calculo_i/tex && nvim main.tex'
+alias rcnvim='cd ~/.dotfiles/nvim/ && nvim init.lua'
 
 # Arch Linux
 # Pacaur
