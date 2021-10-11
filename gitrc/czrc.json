@@ -275,7 +275,7 @@
       },
       {
         "emoji": "👌",
-        "code": ":ok_hand:",
+        "code": ":wrench:",
         "description": "Updating code due to code review changes.",
         "name": "review"
       },
