@@ -2,7 +2,7 @@
 # File              : .zshrc
 # Author            : I'mCylon <imcylonrs@gmail.com>
 # Date              : 31.07.2021
-# Last Modified Date: 19.08.2021
+# Last Modified Date: 10.10.2021
 # Last Modified By  : I'mCylon <imcylonrs@gmail.com>
 
 # most be before the p10k
@@ -100,7 +100,7 @@ plugins=(
     web-search
     zsh-autosuggestions
     zsh-navigation-tools
-    zsh_reload
+    # zsh_reload
 )
 
 ZSH_WEB_SEARCH_ENGINES=(
