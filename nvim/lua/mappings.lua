@@ -2,7 +2,7 @@
 File              : mappings.lua
 Author            : I'mCylon <imcylonrs@gmail.com>
 Date              : 13.07.2021
-Last Modified Date: 27.09.2021
+Last Modified Date: 04.10.2021
 Last Modified By  : I'mCylon <imcylonrs@gmail.com>
 --]]--
 
@@ -86,6 +86,7 @@ set_keymap('n', '<leader>lf', '<cmd>lua vim.lsp.buf.formatting()<CR>')
 set_keymap('n', '<leader>pi', '<cmd>PaqInstall<CR>')
 set_keymap('n', '<leader>pu', '<cmd>PaqUpdate<CR>')
 set_keymap('n', '<leader>pc', '<cmd>PaqClean<CR>')
+set_keymap('n', '<leader>ps', '<cmd>PaqSync<CR>')
 ---------- git-blame
 set_keymap('n', '<leader>gb', '<cmd>GitBlameToggle<CR>')
 ---------- gitsigns
@@ -102,6 +103,9 @@ set_keymap('n', '<leader><space>', '<cmd>HopWord<CR>')
 set_keymap('n', '<leader>e', '<cmd>HopLine<CR>')
 ---------- center cursor
 set_keymap('n', 'zz', '<cmd>luado ZZ()<CR>zz')
+
+---------- vimtex
+set_keymap('n', '<leader>ll', '<cmd>VimtexCompile<CR>')
 ---------- spell
 set_keymap('n', '<leader>sp', '<cmd>set spell spelllang=pt<CR>')
 set_keymap('n', '<leader>se', '<cmd>set spell spelllang=en_us<CR>')
