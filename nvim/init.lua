@@ -2,7 +2,7 @@
 File              : init.lua
 Author            : I'mCylon <imcylonrs@gmail.com>
 Date              : 14.08.2021
-Last Modified Date: 11.10.2021
+Last Modified Date: 10.11.2021
 Last Modified By  : I'mCylon <imcylonrs@gmail.com>
 --]]--
 
@@ -17,20 +17,22 @@ require('mappings')
 ---------- abrev
 require('abrev')
 ---------- plugins
-require('plugins.gitsigns')
-require('plugins.vimtex')
 require('plugins.appearance')
 require('plugins.compe')
 require('plugins.emmet')
 require('plugins.floaterm')
+require('plugins.gitsigns')
 require('plugins.header')
+require('plugins.hop')
 require('plugins.lspconfig')
 require('plugins.lualine')
+require('plugins.nvim-tree')
 require('plugins.prettier')
 require('plugins.setups')
 require('plugins.startify')
 require('plugins.telescope')
 require('plugins.treesitter')
+require('plugins.vimtex')
 require('plugins.vimwiki')
 require('plugins.vsnip')
 

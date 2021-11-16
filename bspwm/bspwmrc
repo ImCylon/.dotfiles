@@ -2,7 +2,7 @@
 # File              : bspwmrc
 # Author            : I'mCylon <imcylonrs@gmail.com>
 # Date              : 01.08.2021
-# Last Modified Date: 10.10.2021
+# Last Modified Date: 01.11.2021
 # Last Modified By  : I'mCylon <imcylonrs@gmail.com>
 
 pgrep -x sxhkd > /dev/null || sxhkd &
@@ -36,6 +36,7 @@ xsetroot -cursor_name left_ptr
 bspc rule -a krunner border=off
 bspc rule -a Zathura state=tiled
 bspc rule -a TelegramDesktop desktop='^3'
+bspc rule -a discord desktop='^1'
 bspc rule -a systemsettings state=floating rectangle=1200x700+100+190
 bspc rule -a plasmashell state=floating border=off layer=normal
 bspc rule -a kalarm state=floating
