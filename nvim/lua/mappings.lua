@@ -2,7 +2,7 @@
 File              : mappings.lua
 Author            : I'mCylon <imcylonrs@gmail.com>
 Date              : 13.07.2021
-Last Modified Date: 04.10.2021
+Last Modified Date: 10.11.2021
 Last Modified By  : I'mCylon <imcylonrs@gmail.com>
 --]]--
 
@@ -20,10 +20,10 @@ set_keymap('n', '<leader>wq', '<cmd>wqa!<CR>')
 set_keymap('n', '<leader>qq', '<cmd>q!<CR>')
 set_keymap('n', '<leader>wa', '<cmd>wa!<CR>')
 set_keymap('n', '<leader>ss', '<cmd>source % | echo "RELOAD!!"<CR>')
-set_keymap('n', '<leader>ne', '<cmd>NvimTreeFindFile <CR>')
-set_keymap('n', '<leader>nc', '<cmd>NvimTreeClose<CR>')
+set_keymap('n', '<leader>ne', '<cmd>NvimTreeToggle<CR>')
 set_keymap('n', '<leader>ft', '<cmd>FloatermToggle<CR>')
 set_keymap('n', '<leader>vv', '<cmd>VimwikiIndex<CR>')
+set_keymap('n', '<leader>vd', '<cmd>VimwikiDiaryIndex<CR>')
 set_keymap('i', 'kj', '<ESC>')
 set_keymap('i', 'jk', '<ESC>')
 set_keymap('i', 'jk', '<ESC>')
@@ -96,8 +96,8 @@ set_keymap('n', '<leader>hu', '<cmd>Gitsings undo_stage_hunk<CR>')
 set_keymap('n', '<leader>hr', '<cmd>Gitsings reset_hunk<CR>')
 set_keymap('v', '<leader>hr', '<cmd>Gitsings reset_hunk<CR>')
 set_keymap('n', '<leader>hR', '<cmd>Gitsings reset_buffer<CR>')
-set_keymap('n', '<leader>hp', '<cmd>Gitsings preview_hunk<CR>')
 set_keymap('n', '<leader>hb', '<cmd>Gitsings blame_line<CR>')
+set_keymap('n', '<leader>hp', '<cmd>Gitsings preview_hunk<CR>')
 ---------- hop.nvim
 set_keymap('n', '<leader><space>', '<cmd>HopWord<CR>')
 set_keymap('n', '<leader>e', '<cmd>HopLine<CR>')
