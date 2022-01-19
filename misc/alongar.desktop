@@ -1,0 +1,6 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Exec=gwenview -s -f /home/pictures/screenshot/alongamento/
+Name=Alongar
+Comment=Alongamentos
+Type=Application
