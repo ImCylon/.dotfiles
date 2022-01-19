@@ -20,6 +20,7 @@ alias rcranger='nvim ~/.dotfiles/ranger/rc.conf'
 alias rcsxhkd='nvim ~/.dotfiles/sxhkd/sxhkdrc'
 alias rctmux='nvim ~/.dotfiles/tmux/tmux.conf'
 alias rczsh='nvim ~/.zshrc'
+alias rcnvim='cd ~/.dotfiles/nvim/ && nvim init.lua'
 alias vim='nvim'
 
 # Git
@@ -39,6 +40,7 @@ alias hr='history | rg '
 alias sc='sudo systemctl '
 alias mount='sudo mount'
 alias cheat='curl cht.sh/'
+alias cat='bat'
 
 # Directories
 alias pj='/home/projects'
@@ -50,11 +52,10 @@ alias sim='/home/projects/SciIzi/mathematics'
 alias sip='/home/projects/SciIzi/physics'
 alias 42='/home/projects/project-42'
 alias cfg='~/.config'
-alias dff='~/.dotfiles'
+alias d='~/.dotfiles'
 alias lcl='~/.local'
 alias dw='/home/download'
 alias cdi1='cd /home/projects/SciIzi/mathematics/1_periodo/calculo_i/tex && nvim main.tex'
-alias rcnvim='cd ~/.dotfiles/nvim/ && nvim init.lua'
 
 # Arch Linux
 # Pacaur
