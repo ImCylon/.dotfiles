@@ -9,6 +9,7 @@ Last Modified By  : I'mCylon <imcylonrs@gmail.com>
 require("imcylon.mappings")
 require("imcylon.options")
 require("imcylon.packs")
+require("imcylon.abrev")
 
 -- Settins plugins
 require("imcylon.plugins.appearance")
