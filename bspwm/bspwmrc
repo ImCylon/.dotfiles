@@ -2,9 +2,10 @@
 # File              : bspwmrc
 # Author            : I'mCylon <imcylonrs@gmail.com>
 # Date              : 01.08.2021
-# Last Modified Date: 01.11.2021
+# Last Modified Date: 17.01.2022
 # Last Modified By  : I'mCylon <imcylonrs@gmail.com>
 
+wmname LG3D                       # Fix applications java. Show white window
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 bspc monitor -d I II III IV V VI VII VIII IX X
@@ -37,6 +38,7 @@ bspc rule -a krunner border=off
 bspc rule -a Zathura state=tiled
 bspc rule -a TelegramDesktop desktop='^3'
 bspc rule -a discord desktop='^1'
+bspc rule -a gwenview desktop='^4'
 bspc rule -a systemsettings state=floating rectangle=1200x700+100+190
 bspc rule -a plasmashell state=floating border=off layer=normal
 bspc rule -a kalarm state=floating

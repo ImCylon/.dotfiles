@@ -7,3 +7,6 @@ gitrc/config
 nvim/undodir
 tmux/plugins
 tmuxinator
+**/nvim_0
+**/lunarVim
+Session.vim
