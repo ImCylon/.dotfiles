@@ -37,3 +37,14 @@ require("imcylon.plugins.illuminate")
 require("imcylon.plugins.hop")
 require("imcylon.plugins.julia")
 require("imcylon.plugins.slime")
+
+-- centralizer scroolloff
+function ZZ()
+	if vim.api.nvim_get_option("scrolloff") == 999 then
+		vim.api.nvim_set_option("scrolloff", 1)
+		return (vim.cmd("set scrolloff=1"))
+	else
+		vim.cmd("set scrolloff=999")
+		return (vim.api.nvim_set_option("scrolloff", 999))
+	end
+end
