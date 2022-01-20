@@ -124,6 +124,11 @@ _G.packer_plugins = {
     path = "/home/imcylon/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
   },
+  ["cmp-spell"] = {
+    loaded = true,
+    path = "/home/imcylon/.local/share/nvim/site/pack/packer/start/cmp-spell",
+    url = "https://github.com/f3fora/cmp-spell"
+  },
   ["cmp-tabnine"] = {
     loaded = true,
     path = "/home/imcylon/.local/share/nvim/site/pack/packer/start/cmp-tabnine",
@@ -272,7 +277,7 @@ _G.packer_plugins = {
   ["vim-header"] = {
     loaded = true,
     path = "/home/imcylon/.local/share/nvim/site/pack/packer/start/vim-header",
-    url = "https://github.com/alpertuna/vim-header"
+    url = "https://github.com/ImCylon/vim-header"
   },
   ["vim-illuminate"] = {
     loaded = true,

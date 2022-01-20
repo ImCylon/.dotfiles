@@ -1,8 +1,8 @@
 --[[--
 File              : packs.lua
 Author            : I'mCylon <imcylonrs@gmail.com>
-Date              : 14.01.2022
-Last Modified Date: 19.01.2022
+Date              : 20.01.2022
+Last Modified Date: 20.01.2022
 Last Modified By  : I'mCylon <imcylonrs@gmail.com>
 --]]
 
@@ -61,7 +61,7 @@ return packer.startup(function(use)
 	use("goolord/alpha-nvim") -- Vim startify/dashboard
 	use("voldikss/vim-floaterm") -- Float term
 	use("lewis6991/impatient.nvim") -- Speed up loading Lua modules
-	use("alpertuna/vim-header") -- Easily adds brief author info and license headers
+	use("ImCylon/vim-header") -- Easily adds brief author info and license headers
 	use("nvim-lualine/lualine.nvim") -- A simple nvim statusline
 	use("voldikss/vim-browser-search") -- Perfom a quick web search
 	use("RRethy/vim-illuminate") -- Highlight hover word
@@ -84,6 +84,7 @@ return packer.startup(function(use)
 	use("hrsh7th/nvim-cmp") -- The completion plugin
 	use("hrsh7th/cmp-buffer") -- Buffer completions
 	use("hrsh7th/cmp-path") -- Path completions
+	use("f3fora/cmp-spell") -- Path completions
 	use("hrsh7th/cmp-cmdline") -- Cmdline completions
 	use("saadparwaiz1/cmp_luasnip") -- Snippet completions
 	use("hrsh7th/cmp-nvim-lsp") -- Lsp completions

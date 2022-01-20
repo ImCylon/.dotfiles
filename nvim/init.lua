@@ -2,7 +2,7 @@
 File              : init.lua
 Author            : I'mCylon <imcylonrs@gmail.com>
 Date              : 14.01.2022
-Last Modified Date: 19.01.2022
+Last Modified Date: 20.01.2022
 Last Modified By  : I'mCylon <imcylonrs@gmail.com>
 --]]
 
@@ -37,6 +37,7 @@ require("imcylon.plugins.illuminate")
 require("imcylon.plugins.hop")
 require("imcylon.plugins.julia")
 require("imcylon.plugins.slime")
+require("imcylon.plugins.vimwiki")
 
 -- centralizer scroolloff
 function ZZ()

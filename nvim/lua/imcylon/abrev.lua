@@ -10,6 +10,8 @@ vim.cmd("ab nao não")
 vim.cmd("ab Nao Não")
 vim.cmd("ab çao ção")
 vim.cmd("ab çoes ções")
+vim.cmd("ab Ciencia Ciência")
+vim.cmd("ab ciencia ciência")
 -- vim.cmd'ab Opçao Opção'
 -- vim.cmd'ab Opçoes Opções'
 -- vim.cmd'ab opçao opção'
