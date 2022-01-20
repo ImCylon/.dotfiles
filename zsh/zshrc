@@ -2,7 +2,7 @@
 # File              : .zshrc
 # Author            : I'mCylon <imcylonrs@gmail.com>
 # Date              : 31.07.2021
-# Last Modified Date: 30.10.2021
+# Last Modified Date: 19.01.2022
 # Last Modified By  : I'mCylon <imcylonrs@gmail.com>
 #
 # Enable Ctrl-x-e to edit command line
@@ -29,6 +29,7 @@ export ZSH=~/.oh-my-zsh
 export XDG_CONFIG_HOME=~/.config
 export LOCAL=~/.local
 export MYVIMRC=~/.dotfiles/nvim/init.lua
+export AB=~/.dotfiles/nvim/lua/imcylon/abrev.lua
 export RIPGREP_CONFIG_PATH=~/.config/ripgrep/ripgrep.conf
 
 # flutter config - after run sdkmanager^flutter --licenses
