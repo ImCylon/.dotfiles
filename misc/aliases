@@ -22,6 +22,7 @@ alias rctmux='nvim ~/.dotfiles/tmux/tmux.conf'
 alias rczsh='nvim ~/.zshrc'
 alias rcnvim='cd ~/.dotfiles/nvim/ && nvim init.lua'
 alias vim='nvim'
+alias n='nvim'
 
 # Git
 alias gc='git commit -S -v'
@@ -55,6 +56,7 @@ alias cfg='~/.config'
 alias d='~/.dotfiles'
 alias lcl='~/.local'
 alias dw='/home/download'
+alias lc='/home/lectures'
 alias cdi1='cd /home/projects/SciIzi/mathematics/1_periodo/calculo_i/tex && nvim main.tex'
 
 # Arch Linux
