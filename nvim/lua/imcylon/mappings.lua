@@ -2,7 +2,7 @@
 File              : mappings.lua
 Author            : I'mCylon <imcylonrs@gmail.com>
 Date              : 13.07.2021
-Last Modified Date: 20.01.2022
+Last Modified Date: 21.01.2022
 Last Modified By  : I'mCylon <imcylonrs@gmail.com>
 --]]
 
@@ -88,7 +88,7 @@ keymap("c", "<c-e>", "<End>", opts)
 keymap("n", "<leader>pd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
 keymap("n", "<leader>pD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
 keymap("n", "<leader>pt", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts)
-keymap("n", "<leader>li", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
+keymap("n", "<leader>pi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
 keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
 keymap("n", "U", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
 keymap("n", "<leader>pr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
@@ -97,7 +97,6 @@ keymap("n", "<leader>pS", "<cmd>lua vim.lsp.buf.workspace_symbol()<CR>", opts)
 keymap("n", "<leader>pR", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
 keymap("n", "<leader>pf", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
 ---------- plug manager
-keymap("n", "<leader>pi", "<cmd>PackerInstall<CR>", opts)
 keymap("n", "<leader>pu", "<cmd>PackerUpdate<CR>", opts)
 ---------- git-blame
 keymap("n", "<leader>G", "<cmd>Gitsigns toggle_current_line_blame<CR>", opts)

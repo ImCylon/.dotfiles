@@ -2,7 +2,7 @@
 File              : appearance.lua
 Author            : I'mCylon <imcylonrs@gmail.com>
 Date              : 13.07.2021
-Last Modified Date: 18.01.2022
+Last Modified Date: 21.01.2022
 Last Modified By  : I'mCylon <imcylonrs@gmail.com>
 --]]
 --
@@ -10,7 +10,7 @@ Last Modified By  : I'mCylon <imcylonrs@gmail.com>
 vim.opt.background = "dark"
 vim.api.nvim_command("colorscheme dracula")
 vim.cmd("hi Normal guibg=NONE")
-vim.cmd("hi Comment guibg=NONE guifg=#7C7C7C")
+vim.cmd("hi Comment guibg=NONE guifg=#B2B2B2")
 vim.cmd("hi GitsignsCurrentLineBlame guifg=#707070")
 -- vim.cmd'hi GitsignsCurrentLineBlame guifg=#666666'
 ---------- Cursors
