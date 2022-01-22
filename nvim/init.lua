@@ -38,6 +38,7 @@ require("imcylon.plugins.hop")
 require("imcylon.plugins.julia")
 require("imcylon.plugins.slime")
 require("imcylon.plugins.vimwiki")
+require("imcylon.plugins.vimwiki")
 
 -- centralizer scroolloff
 function ZZ()

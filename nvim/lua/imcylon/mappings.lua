@@ -2,7 +2,7 @@
 File              : mappings.lua
 Author            : I'mCylon <imcylonrs@gmail.com>
 Date              : 13.07.2021
-Last Modified Date: 21.01.2022
+Last Modified Date: 22.01.2022
 Last Modified By  : I'mCylon <imcylonrs@gmail.com>
 --]]
 
