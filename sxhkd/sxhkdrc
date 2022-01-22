@@ -25,7 +25,10 @@ super + {_,shift + }q
 
 # alternate between the tiled and monocle layout
 super + m
-	bspc desktop -l next
+  for node_i in $(bspc query -N -n '.!focused.window' -d focused); \
+    do \
+      bspc node $node_i -g hidden; \
+    done
 
 # send the newest marked node to the newest preselected node
 super + y
