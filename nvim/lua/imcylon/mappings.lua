@@ -2,7 +2,7 @@
 File              : mappings.lua
 Author            : I'mCylon <imcylonrs@gmail.com>
 Date              : 13.07.2021
-Last Modified Date: 22.01.2022
+Last Modified Date: 30.01.2022
 Last Modified By  : I'mCylon <imcylonrs@gmail.com>
 --]]
 
@@ -29,7 +29,12 @@ keymap("n", "<leader>qq", "<cmd>q!<CR>", opts)
 keymap("n", "<leader>wa", "<cmd>wa!<CR>", opts)
 keymap("n", "<leader>ss", '<cmd>source % | echo "RELOAD!!"<CR>', opts)
 keymap("n", "<leader>x", "<cmd>NvimTreeToggle<CR>", opts)
-keymap("n", "<leader>f", "<cmd>Telescope find_files<CR>", opts)
+keymap("n", "<leader>ff", "<cmd>Telescope find_files<CR>", opts)
+keymap("n", "<leader>fr", "<cmd>Telescope live_grep<CR>", opts)
+keymap("n", "<leader>fs", "<cmd>Telescope git_status<CR>", opts)
+keymap("n", "<leader>fm", "<cmd>Telescope keymaps<CR>", opts)
+keymap("n", "<leader>fb", "<cmd>Telescope buffers<CR>", opts)
+keymap("n", "<leader>fc", "<cmd>Telescope git_commits<CR>", opts)
 --'<cmd>NvimTreeToggle<CR>', opts)
 keymap("n", "<leader>vd", "<cmd>VimwikiDiaryIndex<CR>", opts)
 keymap("n", "<leader>vi", "<cmd>VimwikiIndex<CR>", opts)
@@ -42,7 +47,6 @@ keymap("i", "<c-e>", "<End>", opts)
 keymap("n", "k", "gk", opts)
 keymap("n", "j", "gj", opts)
 ---------- editing
-keymap("n", "Y", "y$", opts)
 keymap("n", "<a-Up>", "<cmd>m .-2<CR>", opts)
 keymap("n", "<a-Down>", "<cmd>m .+1<CR>", opts)
 keymap("n", "<a-k>", "<cmd>m .-2<CR>", opts)
@@ -98,16 +102,6 @@ keymap("n", "<leader>pR", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
 keymap("n", "<leader>pf", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
 ---------- plug manager
 keymap("n", "<leader>pu", "<cmd>PackerUpdate<CR>", opts)
----------- git-blame
-keymap("n", "<leader>G", "<cmd>Gitsigns toggle_current_line_blame<CR>", opts)
----------- gitsigns
-keymap("n", "<leader>gs", "<cmd>Gitsings stage_hunk<CR>", opts)
-keymap("v", "<leader>gs", "<cmd>Gitsings stage_hunk<CR>", opts)
-keymap("n", "<leader>gu", "<cmd>Gitsings undo_stage_hunk<CR>", opts)
-keymap("n", "<leader>gr", "<cmd>Gitsings reset_hunk<CR>", opts)
-keymap("n", "<leader>gR", "<cmd>Gitsings reset_buffer<CR>", opts)
--- keymap('n', '<leader>gb', '<cmd>Gitsings blame_line<CR>', opts)
-keymap("n", "<leader>gp", "<cmd>Gitsings preview_hunk<CR>", opts)
 ---------- hop.nvim
 keymap("n", "<leader><space>", "<cmd>HopWord<CR>", opts)
 keymap("n", "<leader>e", "<cmd>HopLine<CR>", opts)
