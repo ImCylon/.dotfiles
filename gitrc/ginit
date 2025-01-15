@@ -1,0 +1,110 @@
+#!/bin/bash
+# File              : ginit
+# Author            : I'mCylon <imcylonrs@gmail.com>
+# Date              : 18.08.2021
+# Last Modified Date: 18.06.2022
+# Last Modified By  : I'mCylon <imcylonrs@gmail.com>
+
+cd .
+DIR= pwd
+read -p "Set/Install: GIT, COMMITLINT, HUSKY, COMMITIZEN-CLI?  [Y/n]: " \
+    GIT_INIT
+if [ -z $GIT_INIT ] || [ "$GIT_INIT" == "y" ] || [ "$GIT_INIT" == "Y" ] || \
+    [ "$GIT_INIT" == "yes" ] || [ "$GIT_INIT" == "YES" ]
+then
+
+#### Setting git
+git --version > /dev/null 2>&1
+if [ $? != 0 ]; then
+    echo "Installing git..."
+    sudo pacman -S git
+else
+    echo -e "$(git --version)"
+fi
+if [ ! -d .git ]; then
+    git init
+else
+echo "Git repository already exist."
+echo "Update or Reset repository? [U/r]: " 
+    read -n1 GIT_CONT
+    if [ -z $GIT_CONT ] || [ "$GIT_CONT" == "U" ] || [ "$GIT_CONT" == "u" ]
+    then
+        echo "Updating..."
+    else
+        echo "you want to modify this repository, follow:"
+        echo "- Delete .git/"
+        echo "- run ginit(again)"
+        exit
+    fi
+fi
+
+#### Setting nodejs
+node -v > /dev/null 2>&1
+if [ $? != 0 ]; then
+    echo "Installing nodejs..."
+    sudo pacman -S nodejs
+else
+    echo -e "node version $(node -v)"
+fi
+
+#### Setting npm
+npm -v > /dev/null 2>&1
+if [ $? != 0 ]; then
+    echo "Installing npm..."
+    sudo pacman -S npm
+else
+    echo "npm version $(npm -v)"
+fi
+
+#### Setting commitlint
+commitlint -v > /dev/null 2>&1
+if [ $? != 0 ]; then
+  echo "Installing commitlint..."
+  sudo npm install --global @commitlint/{config-conventional,cli}
+  echo "module.exports = {extends: ['@commitlint/config-conventional']}" > commitlint.config.js
+
+else
+  echo "$(commitlint -v|sed 's/.*\(commitlint\).*@\([0-9].*[0-9]\)/\1 version \2/')"
+  echo "module.exports = {extends: ['@commitlint/config-conventional']}" > commitlint.config.js
+
+fi
+
+#### Setting husky
+husky -v > /dev/null 2>&1
+if [ $? != 0 ]; then
+  echo "Installing husky..."
+  sudo npm install --global husky
+else
+  echo "husky version $(husky -v)"
+fi
+if [ -d .husky ]; then
+  rm -rfv ./.husky
+fi
+npx husky install
+npx husky add .husky/commit-msg 'npx --no-install commitlint --edit "$1"'
+npx husky add .husky/prepare-commit-msg \
+  'exec < /dev/tty && git cz --hook || true'
+
+#### Setting commitizen-cli
+commitizen > /dev/null 2>&1
+if [ $? != 0 ]; then
+  echo "Installing commitizen..."
+  sudo npm install --global commitizen
+  echo "Starting commitizen..."
+  commitizen init cz-conventional-changelog --save-dev --save-exact
+else
+  echo "$(npm list -g commitizen|rg commitizen|head -1|sed \
+    's/.*\(commitizen\)@\([0-9].*[0-9]\)/\1 version \2 /')"
+  echo "Starting commitizen..."
+  commitizen init cz-conventional-changelog --save-dev --save-exact
+fi
+
+#### Setting gitignore
+if [ ! -f .gitignore ]; then
+    echo "node_modules" >.gitignore
+    echo "commitlint.config.js" >>.gitignore
+    echo "package.json" >>.gitignore
+    echo "package-lock.json" >>.gitignore
+    echo ".husky" >>.gitignore
+fi
+fi

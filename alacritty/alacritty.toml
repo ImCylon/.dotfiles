@@ -1,0 +1,44 @@
+
+[cursor]
+blink_interval = 500
+
+[cursor.style]
+blinking = "On"
+shape = "Block"
+
+[font]
+size = 12.0
+
+[font.bold]
+style = "Semibold"
+
+[font.italic]
+style = "italic"
+
+[font.normal]
+family = "Monofur Nerd Font"
+style = "Regular"
+
+[[keyboard.bindings]]
+chars = "\u001E"
+key = "Key6"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "ResetFontSize"
+key = "Key9"
+mods = "Command"
+
+[scrolling]
+history = 10000
+
+[window]
+decorations = "none"
+# startup_mode = "Windowed"
+# opacity = 0.7
+
+[selection]
+save_to_clipboard = true
+
+[general]
+import = ["/home/imcylon/.dotfiles/alacritty/dracula.toml"]

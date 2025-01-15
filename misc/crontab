@@ -1,0 +1,4 @@
+DISPLAY=:0.0
+@reboot sleep 50 && opera
+@reboot sleep 70 && discord
+@reboot sleep 90 && telegram-desktop

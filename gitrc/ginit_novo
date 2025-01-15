@@ -1,0 +1,59 @@
+#!/bin/bash
+# File              : ginit
+# Author            : I'mCylon <imcylonrs@gmail.com>
+# Date              : 30.01.2023
+# Last Modified Date: 30.01.2023
+# Last Modified By  : I'mCylon <imcylonrs@gmail.com>
+
+# cd .
+# DIR= pwd
+#
+# read -p "Set/Install: GIT, COMMITLINT, HUSKY, COMMITIZEN-CLI?  [Y/n]: " \
+#     GIT_INIT
+# if [ -z $GIT_INIT ] || [ "$GIT_INIT" == "y" ] || [ "$GIT_INIT" == "Y" ] || \
+#     [ "$GIT_INIT" == "yes" ] || [ "$GIT_INIT" == "YES" ]
+# then
+#
+# #### Setting git
+# git --version > /dev/null 2>&1
+# if [ $? != 0 ]; then
+#     echo "Installing git..."
+#     sudo pacman -S git
+# else
+#     echo -e "$(git --version)"
+# fi
+# if [ ! -d .git ]; then
+#     git init
+# else
+# echo "Git repository already exist."
+# echo "Update or Reset repository? [U/r]: " 
+#     read -n1 GIT_CONT
+#     if [ -z $GIT_CONT ] || [ "$GIT_CONT" == "U" ] || [ "$GIT_CONT" == "u" ]
+#     then
+#         echo "Updating..."
+#     else
+#         echo "you want to modify this repository, follow:"
+#         echo "- Delete .git/"
+#         echo "- run ginit(again)"
+#         exit
+#     fi
+# fi
+
+git init
+
+npm install --save-dev @commitlint/{config-conventional,cli}
+
+echo "module.exports = {extends: ['@commitlint/config-conventional']}" > commitlint.config.js
+
+npm install husky --save-dev
+
+npx husky install
+
+npx husky add .husky/commit-msg 'npx --no-install commitlint --edit "$1"'
+
+npx husky add .husky/prepare-commit-msg \
+  'exec < /dev/tty && git cz --hook || true'
+
+npm commitizen --save-dev
+
+commitizen init cz-conventional-changelog --save-dev --save-exact
