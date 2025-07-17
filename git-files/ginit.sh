@@ -141,7 +141,7 @@ if ! command -v husky 1>/dev/null 2>&1; then
         # npx husky add .husky/commit-msg 'npx --no-install commitint --edit "$1"'
         # echo -e "husky version $(husky -v)"
         # sudo npm install --global husky
-        echo ""
+        # echo ""
         # echo -e "husky version $(husky -v)"
     else
         echo ""
