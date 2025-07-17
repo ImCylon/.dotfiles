@@ -15,8 +15,12 @@ bindkey '^xe' edit-command-line
 bindkey '^x^e' edit-command-line
 bindkey '5~' kill-word
 
-export GPG_TTY=$(tty)
+export OLLAMA_MODELS=/mymedia/ollama-models
 
+export GPG_TTY=$(tty)
+export MESA_LOADER_DRIVER_OVERRIDE=radeonsi
+export AMD_VULKAN_ICD=RADV
+export AMD_VULKAN_ASYNC_COMPUTE=1
 # Pipewire set-input
 export INPUTAUDIO=$(wpctl status | grep -m 1 -a -B 10 'Source endpoints:' |\
     grep -m 1 -a -A 10 'Sources:' | grep '[1-9]' | sed 's/.*\(...[0-9]\+\)\.\s.*/\1/')
@@ -31,6 +35,7 @@ export LOCAL=~/.local
 export MYVIMRC=~/.dotfiles/nvim/init.lua
 export AB=~/.dotfiles/nvim/lua/imcylon/abrev.lua
 export RIPGREP_CONFIG_PATH=~/.config/ripgrep/ripgrep.conf
+export MOZ_ENABLE_WAYLAND=1
 
 # flutter config - after run sdkmanager^flutter --licenses
 export JAVA_HOME=/usr/lib/jvm/default
@@ -46,7 +51,7 @@ HISTSIZE=SAVEHIST=100000
 # Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-export UPDATE_ZSH_DAYS=15
+export UPDATE_ZSH_DAYS=1
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -169,8 +174,9 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias luamake=/home/imcylon/.local/share/nvim/site/pack/lua-language-server/3rd/luamake/luamake
-source $ZSH/oh-my-zsh.sh
-source $HOME/.dotfiles/misc/aliases
+. $ZSH/oh-my-zsh.sh
+. $HOME/.dotfiles/misc/aliases
+. $HOME/.dotfiles/misc/zsh-functions
 # source ~/.bash_profile
 ### Zoxide ###
 # . /home/imcylon/.dotfiles/misc/bin/XAUTH.sh
