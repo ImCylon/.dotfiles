@@ -33,9 +33,9 @@ mods = "Command"
 history = 10000
 
 [window]
-decorations = "none"
+# decorations = "none"
 # startup_mode = "Windowed"
-# opacity = 0.7
+opacity = 0.99
 
 [selection]
 save_to_clipboard = true
