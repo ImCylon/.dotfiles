@@ -1,3 +1,39 @@
 [submodule "nvim"]
 	path = nvim
 	url = https://github.com/ImCylon/astronvim_v5
+[submodule "alacritty"]
+	path = alacritty
+	url = https://github.com/ImCylon/alacritty
+[submodule "crontab"]
+	path = crontab
+	url = https://github.com/ImCylon/crontab.git
+[submodule "git-files"]
+	path = git-files
+	url = https://github.com/ImCylon/git-files.git
+[submodule "hypr"]
+	path = hypr
+	url = https://github.com/ImCylon/hypr.git
+[submodule "misc"]
+	path = misc
+	url = https://github.com/ImCylon/misc.git
+[submodule "ripgrep"]
+	path = ripgrep
+	url = https://github.com/ImCylon/ripgrep.git
+[submodule "scripts"]
+	path = scripts
+	url = https://github.com/ImCylon/scripts.git
+[submodule "swaync"]
+	path = swaync
+	url = https://github.com/ImCylon/swaync.git
+[submodule "tex"]
+	path = tex
+	url = https://github.com/ImCylon/tex.git
+[submodule "waybar"]
+	path = waybar
+	url = https://github.com/ImCylon/waybar.git
+[submodule "zathura"]
+	path = zathura
+	url = https://github.com/ImCylon/zathura.git
+[submodule "zsh"]
+	path = zsh
+	url = https://github.com/ImCylon/zsh.git

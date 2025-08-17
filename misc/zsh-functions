@@ -1,3 +1,0 @@
-erem() {
-    sudo emerge -W "$1" && sudo emerge -c "$1"
-}
