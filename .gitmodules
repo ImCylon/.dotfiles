@@ -55,3 +55,9 @@
 [submodule "systemd"]
 	path = systemd
 	url = git://github.com/ImCylon/systemd.git
+[submodule "lsd"]
+	path = lsd
+	url = git://github.com/ImCylon/lsd.git
+[submodule "swaylock"]
+	path = swaylock
+	url = git://github.com/ImCylon/swaylock.git
