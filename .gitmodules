@@ -37,3 +37,6 @@
 [submodule "zsh"]
 	path = zsh
 	url = git@github.com:ImCylon/zsh.git
+[submodule "dunst"]
+	path = dunst
+	url = https://github.com/ImCylon/dunst.git
