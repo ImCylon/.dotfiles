@@ -52,3 +52,6 @@
 [submodule "tofi"]
 	path = tofi
 	url = git://github.com/ImCylon/tofi.git
+[submodule "systemd"]
+	path = systemd
+	url = git://github.com/ImCylon/systemd.git
