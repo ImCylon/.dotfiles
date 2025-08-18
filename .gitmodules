@@ -1,45 +1,54 @@
 [submodule "nvim"]
 	path = nvim
-	url = https://github.com/ImCylon/astronvim_v5
+	url = git://github.com/ImCylon/astronvim_v5.git
 [submodule "alacritty"]
 	path = alacritty
-	url = https://github.com/ImCylon/alacritty
+	url = git://github.com/ImCylon/alacritty.git
 [submodule "crontab"]
 	path = crontab
-	url = https://github.com/ImCylon/crontab.git
+	url = git://github.com/ImCylon/crontab.git
 [submodule "git-files"]
 	path = git-files
-	url = https://github.com/ImCylon/git-files.git
+	url = git://github.com/ImCylon/git-files.git
 [submodule "hypr"]
 	path = hypr
-	url = https://github.com/ImCylon/hypr.git
+	url = git://github.com/ImCylon/hypr.git
 [submodule "misc"]
 	path = misc
-	url = https://github.com/ImCylon/misc.git
+	url = git://github.com/ImCylon/misc.git
 [submodule "ripgrep"]
 	path = ripgrep
-	url = https://github.com/ImCylon/ripgrep.git
+	url = git://github.com/ImCylon/ripgrep.git
 [submodule "scripts"]
 	path = scripts
-	url = https://github.com/ImCylon/scripts.git
+	url = git://github.com/ImCylon/scripts.git
 [submodule "swaync"]
 	path = swaync
-	url = https://github.com/ImCylon/swaync.git
+	url = git://github.com/ImCylon/swaync.git
 [submodule "tex"]
 	path = tex
-	url = https://github.com/ImCylon/tex.git
+	url = git://github.com/ImCylon/tex.git
 [submodule "waybar"]
 	path = waybar
-	url = https://github.com/ImCylon/waybar.git
+	url = git://github.com/ImCylon/waybar.git
 [submodule "zathura"]
 	path = zathura
-	url = https://github.com/ImCylon/zathura.git
+	url = git://github.com/ImCylon/zathura.git
 [submodule "zsh"]
 	path = zsh
 	url = git@github.com:ImCylon/zsh.git
 [submodule "dunst"]
 	path = dunst
-	url = https://github.com/ImCylon/dunst.git
+	url = git://github.com/ImCylon/dunst.git
 [submodule "tmux"]
 	path = tmux
-	url = https://github.com/ImCylon/tmux.git
+	url = git://github.com/ImCylon/tmux.git
+[submodule "eww"]
+	path = eww
+	url = git://github.com/ImCylon/eww.git
+[submodule "matugen"]
+	path = matugen
+	url = git://github.com/ImCylon/matugen.git
+[submodule "tofi"]
+	path = tofi
+	url = git://github.com/ImCylon/tofi.git
