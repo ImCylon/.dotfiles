@@ -40,3 +40,6 @@
 [submodule "dunst"]
 	path = dunst
 	url = https://github.com/ImCylon/dunst.git
+[submodule "tmux"]
+	path = tmux
+	url = https://github.com/ImCylon/tmux.git
