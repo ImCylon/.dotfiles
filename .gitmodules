@@ -61,3 +61,6 @@
 [submodule "swaylock"]
 	path = swaylock
 	url = git://github.com/ImCylon/swaylock.git
+[submodule "yazi"]
+	path = yazi
+	url = git://github.com/ImCylon/yazi.git
